@@ -19,7 +19,7 @@ Todo o layout, comportamento visual, validação de formulários e responsividad
 ## Como Visualizar
 
 1. Descarrega ou clona o repositório.
-2. Abre o ficheiro `https://github.com/kmuerembe/meu-curriculo` num navegador moderno (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.).
+2. Abre o ficheiro `https://kmuerembe.github.io/meu-curriculo/` num navegador moderno (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.).
 3. Navega pelas páginas utilizando o menu no topo (header fixo).
 
 ---

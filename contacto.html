@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Kevin</title>
+  <meta name="description" content="Formulário de contacto de Kevin — envia uma mensagem ou pedido de orçamento." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="stylesheet" href="css/responsivo.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+      <p class="logotipo">Kevin<span>.</span>dev</p>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Currículo</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="faixa-capulana" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <h2>Fala Comigo</h2>
+      <p style="margin-bottom: var(--espaco-lg);">
+        Preenche o formulário abaixo. Todos os campos assinalados são validados diretamente
+        pelo navegador — sem uso de JavaScript.
+      </p>
+
+      <form class="formulario-contacto" action="#" method="post">
+
+        <fieldset>
+          <legend>Os Teus Dados</legend>
+
+          <div class="campo">
+            <label for="nome">Nome completo *</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              minlength="3"
+              maxlength="80"
+              placeholder="Escreve o teu nome"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="nome@exemplo.com"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone (formato moçambicano) *</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              required
+              pattern="(\+258)?\s?8[2-7][0-9]\s?[0-9]{3}\s?[0-9]{3}"
+              placeholder="+258 84 000 0000"
+              title="Formato esperado: +258 8X XXX XXX"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalhes do Pedido</legend>
+
+          <div class="campo">
+            <label for="data">Data preferida de contacto</label>
+            <input type="date" id="data" name="data" />
+          </div>
+
+          <div class="campo">
+            <label for="orcamento">Orçamento estimado (em milhares de MT)</label>
+            <input
+              type="number"
+              id="orcamento"
+              name="orcamento"
+              min="0"
+              max="500"
+              step="5"
+              placeholder="Ex: 20"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="" disabled selected>Escolhe um assunto</option>
+              <option value="projeto">Proposta de projeto</option>
+              <option value="emprego">Oportunidade de estágio/emprego</option>
+              <option value="colaboracao">Colaboração / parceria</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label id="label-metodo">Forma de contacto preferida</label>
+            <div class="opcoes" role="radiogroup" aria-labelledby="label-metodo">
+              <label class="opcao">
+                <input type="radio" name="metodo-contacto" value="email" checked />
+                Email
+              </label>
+              <label class="opcao">
+                <input type="radio" name="metodo-contacto" value="telefone" />
+                Telefone
+              </label>
+              <label class="opcao">
+                <input type="radio" name="metodo-contacto" value="whatsapp" />
+                WhatsApp
+              </label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label id="label-interesses">Áreas de interesse</label>
+            <div class="opcoes" aria-labelledby="label-interesses">
+              <label class="opcao">
+                <input type="checkbox" name="interesse" value="web" />
+                Desenvolvimento Web
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="interesse" value="excel" />
+                Ferramentas em Excel
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="interesse" value="legaltech" />
+                Legal-Tech
+              </label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="ficheiro">Anexar CV ou documento (PDF)</label>
+            <input
+              type="file"
+              id="ficheiro"
+              name="ficheiro"
+              accept=".pdf,.doc,.docx"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem *</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              required
+              minlength="10"
+              maxlength="500"
+              placeholder="Escreve aqui a tua mensagem..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="faixa-capulana" aria-hidden="true"></div>
+  <footer class="rodape">
+    <div class="rodape__conteudo">
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> kmuerembe@gmail.com</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> +258 853383179</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Redes Sociais</h3>
+        <div class="rodape__redes">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="rodape__assinatura">Desenvolvido por Kevin Muerembe — Universidade Licungo, 2026</p>
+  </footer>
+
+</body>
+</html>

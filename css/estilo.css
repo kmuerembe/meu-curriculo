@@ -1,0 +1,148 @@
+/* ============================================================
+   ESTILO.CSS — Folha de estilos partilhada
+   Site: Currículo Pessoal — Kevin
+   Universidade Licungo — Licenciatura em Informática
+   Disciplina: Programação de Design Web
+   ============================================================ */
+
+:root {
+  --cor-fundo: #0f1b2b;
+  --cor-superficie: #16283f;
+  --cor-superficie-alt: #1e3350;
+  --cor-primaria: #f2a93b;
+  --cor-primaria-escura: #c9861f;
+  --cor-secundaria: #2fa6a0;
+  --cor-texto: #eaf0f6;
+  --cor-texto-suave: #9fb3c8;
+  --cor-borda: rgba(242, 169, 59, 0.25);
+
+  --fonte-titulo: 'Fraunces', 'Georgia', serif;
+  --fonte-corpo: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --fonte-utilitaria: 'JetBrains Mono', 'Courier New', monospace;
+
+  --espaco-xs: 0.5rem;
+  --espaco-sm: 1rem;
+  --espaco-md: 1.75rem;
+  --espaco-lg: 3rem;
+  --espaco-xl: 5rem;
+
+  --raio-borda: 14px;
+  --sombra-card: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --transicao-base: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--cor-texto);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: var(--espaco-md);
+  position: relative;
+  padding-left: 1.2em;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 0.6em;
+  height: 0.6em;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+p {
+  color: var(--cor-texto-suave);
+  max-width: 65ch;
+}
+
+.faixa-capulana {
+  height: 6px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    115deg,
+    var(--cor-primaria) 0 18px,
+    var(--cor-secundaria) 18px 30px,
+    var(--cor-superficie-alt) 30px 46px
+  );
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(15, 27, 43, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho__conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--espaco-sm) var(--espaco-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-sm);
+}
+
+.logotipo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
+.logotipo span {
+  color: var(--cor-primaria);
+}
+
+.navegacao > ul {
+  display: flex;
+  flex-wrap: wrap;

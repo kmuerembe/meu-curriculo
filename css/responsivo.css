@@ -1,0 +1,123 @@
+/* ============================================================
+   RESPONSIVO.CSS — Media queries (mobile-first)
+   ============================================================ */
+
+.cabecalho__conteudo {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.navegacao > ul {
+  gap: var(--espaco-sm);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hero__avatar {
+  width: 120px;
+  height: 120px;
+}
+
+.grelha-hobbies {
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-hobby {
+  width: 100%;
+  max-width: 100%;
+}
+
+.rodape__conteudo {
+  flex-direction: column;
+  text-align: center;
+}
+
+.rodape__redes {
+  justify-content: center;
+}
+
+@media (min-width: 481px) {
+  .cabecalho__conteudo {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navegacao > ul {
+    width: auto;
+  }
+
+  .hero__avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .grelha-hobbies {
+    flex-direction: row;
+  }
+
+  .card-hobby {
+    width: auto;
+    max-width: 260px;
+  }
+
+  .grelha-projetos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rodape__conteudo {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .rodape__redes {
+    justify-content: flex-start;
+  }
+
+  .hero__descricao {
+    font-size: calc(1rem + 0.3vw);
+  }
+}
+
+@media (min-width: 769px) {
+  .hero {
+    padding-top: var(--espaco-xl);
+  }
+
+  .hero__avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .grelha-projetos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .secao {
+    padding-left: var(--espaco-lg);
+    padding-right: var(--espaco-lg);
+  }
+
+  .curriculo-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--espaco-lg);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grelha-projetos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

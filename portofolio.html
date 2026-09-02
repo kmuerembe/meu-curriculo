@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio — Kevin</title>
+  <meta name="description" content="Projetos desenvolvidos por Kevin: legal-tech, sistemas de gestão e ferramentas para o mercado moçambicano." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="stylesheet" href="css/responsivo.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+      <p class="logotipo">Kevin<span>.</span>dev</p>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Currículo</a></li>
+          <li><a href="portfolio.html" class="active" aria-current="page">Portfólio</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="faixa-capulana" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <h2>Portfólio de Projetos</h2>
+      <p style="margin-bottom: var(--espaco-lg);">Uma seleção de projetos reais e ideias que tenho vindo a construir.</p>
+
+      <div class="grelha-projetos">
+
+        <article class="card-projeto">
+          <img
+            class="card-projeto__img"
+            src="https://picsum.photos/seed/conferemz/400/240"
+            alt="Mockup do dashboard do Confere.mz mostrando validação de contratos"
+          />
+          <div class="card-projeto__corpo">
+            <h3>Confere.mz</h3>
+            <p>SaaS legal-tech para validação inteligente de contratos de trabalho segundo a Lei 23/2007 de Moçambique. Motor de regras modular e modelo multi-tenant.</p>
+            <ul class="card-projeto__tags">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Legal-Tech</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card-projeto">
+          <img
+            class="card-projeto__img"
+            src="https://picsum.photos/seed/assiduidade/400/240"
+            alt="Ecrã do sistema de assiduidade empresarial em C++ para Android"
+          />
+          <div class="card-projeto__corpo">
+            <h3>Sistema de Assiduidade</h3>
+            <p>Sistema empresarial de controlo de assiduidade (v2.0), com validação rigorosa de dados, formatação de número moçambicano e desconto salarial automático por faltas/atrasos.</p>
+            <ul class="card-projeto__tags">
+              <li>C++</li>
+              <li>Android</li>
+              <li>CxxDroid</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card-projeto">
+          <img
+            class="card-projeto__img"
+            src="https://picsum.photos/seed/gestaostock/400/240"
+            alt="Folha de cálculo do sistema de gestão de stock com gráficos e KPIs"
+          />
+          <div class="card-projeto__corpo">
+            <h3>Gestão de Stock MZ</h3>
+            <p>Ferramenta comercial em Excel com nove folhas, gráficos, cartões de KPI, cálculo automático de IVA (17%) e valores em Meticais (MT).</p>
+            <ul class="card-projeto__tags">
+              <li>Excel</li>
+              <li>VBA</li>
+              <li>Gestão</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card-projeto">
+          <img
+            class="card-projeto__img"
+            src="https://picsum.photos/seed/lojafacil/400/240"
+            alt="Protótipo de aplicação PWA para pequenos comerciantes informais"
+          />
+          <div class="card-projeto__corpo">
+            <h3>PWA para Comércio Informal</h3>
+            <p>Conceito de aplicação web progressiva para pequenos comerciantes controlarem vendas, stock e crédito ("fiado"), com papéis multiutilizador e subscrição mensal.</p>
+            <ul class="card-projeto__tags">
+              <li>PWA</li>
+              <li>UI/UX</li>
+              <li>Fintech</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="margin-top: var(--espaco-xl);">
+        <h3 style="margin-bottom: var(--espaco-sm); color: var(--cor-secundaria);">Vídeo de Demonstração</h3>
+        <p style="margin-bottom: var(--espaco-sm);">Demonstração em vídeo de um dos projetos acima (incorporado via YouTube).</p>
+        <iframe
+          class="midia"
+          width="100%"
+          height="360"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Vídeo de demonstração de projeto"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p style="margin-top:0.5rem; font-size:0.85rem; color: var(--cor-texto-suave);">
+          Nota: substitui o ID do vídeo no <code>src</code> pelo teu vídeo real no YouTube.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="faixa-capulana" aria-hidden="true"></div>
+  <footer class="rodape">
+    <div class="rodape__conteudo">
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> kevin@exemplo.com</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> +258 84 000 0000</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Redes Sociais</h3>
+        <div class="rodape__redes">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="rodape__assinatura">Desenvolvido por Kevin [Teu Apelido] — Universidade Licungo, 2026</p>
+  </footer>
+
+</body>
+</html>

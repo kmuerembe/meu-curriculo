@@ -650,3 +650,94 @@ figcaption {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
+/* ============================================================
+   15. ANIMAÇÕES EXTRA — movimento contínuo e entrada escalonada
+   Tudo em CSS puro (@keyframes + animation-delay), sem JavaScript.
+   ============================================================ */
+
+/* Entrada suave de toda a página principal */
+main {
+  animation: fade-in-pagina 0.5s ease-out;
+}
+
+@keyframes fade-in-pagina {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cartões do Portfólio: aparecem um a seguir ao outro (efeito cascata) */
+.grelha-projetos .card-projeto {
+  opacity: 0;
+  animation: subir-e-aparecer 0.6s ease-out forwards;
+}
+.grelha-projetos .card-projeto:nth-child(1) { animation-delay: 0.05s; }
+.grelha-projetos .card-projeto:nth-child(2) { animation-delay: 0.18s; }
+.grelha-projetos .card-projeto:nth-child(3) { animation-delay: 0.31s; }
+.grelha-projetos .card-projeto:nth-child(4) { animation-delay: 0.44s; }
+
+/* Cartões dos Hobbies: mesmo efeito em cascata */
+.grelha-hobbies .card-hobby {
+  opacity: 0;
+  animation: subir-e-aparecer 0.6s ease-out forwards;
+}
+.grelha-hobbies .card-hobby:nth-child(1) { animation-delay: 0.05s; }
+.grelha-hobbies .card-hobby:nth-child(2) { animation-delay: 0.15s; }
+.grelha-hobbies .card-hobby:nth-child(3) { animation-delay: 0.25s; }
+.grelha-hobbies .card-hobby:nth-child(4) { animation-delay: 0.35s; }
+.grelha-hobbies .card-hobby:nth-child(5) { animation-delay: 0.45s; }
+.grelha-hobbies .card-hobby:nth-child(6) { animation-delay: 0.55s; }
+
+@keyframes subir-e-aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Avatar da Home: flutuação suave e contínua, depois de aparecer */
+.hero__avatar {
+  animation: aparecer 0.8s ease-out, flutuar 3.2s ease-in-out 0.8s infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Faixa decorativa: movimento contínuo tipo "correia transportadora" */
+.faixa-capulana {
+  background-size: 200% 100%;
+  animation: mover-faixa 5s linear infinite;
+}
+
+@keyframes mover-faixa {
+  from { background-position: 0 0; }
+  to { background-position: 200px 0; }
+}
+
+/* Botão de destaque: pulsação discreta na sombra, depois de aparecer */
+.botao {
+  animation: aparecer 1s ease-out, respirar 2.4s ease-in-out 1s infinite;
+}
+
+@keyframes respirar {
+  0%, 100% { box-shadow: var(--sombra-card); }
+  50% { box-shadow: 9px 9px 0 var(--cor-borda); }
+}
+
+/* Respeita utilizadores que preferem menos movimento (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  main,
+  .grelha-projetos .card-projeto,
+  .grelha-hobbies .card-hobby,
+  .hero__avatar,
+  .faixa-capulana,
+  .botao {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
